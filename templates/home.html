@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <!-- Starts image section -->
+    <div class="row justify-content-md-center mb-4">
+        <h2 class='text-primary'><p align="center"><font face="Century Gothic" color="#ffffff">PREDIKSI KESEJAHTERAAN SESEORANG<br>BERDASARKAN PENDAPATAN</font></p></h2>
+    </div>
+    
+    <div class="row justify-content-md-center">
+            <div class="thumbnail">
+                <img src="{{url_for('static', filename='images/wf.jpg')}}" class="img-fluid" style="width:auto; height: 200px;" />
+                <div class="caption">
+                   </div>
+            </div>
+    </div>
+    <!-- Ends image section -->
+    
+    <!-- Starts form section -->
+    <br>
+    <br>
+    <div class="form-container">
+      <form class="form-horizontal" action = "/predict/" method="post">
+        <div class="form-group row justify-content-md-center">
+          <label class="control-label col-sm-2" for="Umur" style="font-size:20px; color: #ffffff;">Usia</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="Umur" name="Umur">
+          </div>
+        </div>
+        
+        <div class="form-group row justify-content-md-center">
+          <label class="control-label col-sm-2" for="Gaji" style="font-size:20px; color: #ffffff;">Pendapatan</label>
+          <div class="col-sm-4">          
+            <input type="text" class="form-control" id="Gaji" name="Gaji">
+          </div>
+        </div>
+        
+        <div class="form-group row justify-content-md-center"> 
+        <label class="control-label col-sm-2" for="">&nbsp;</label>                
+          <div class="col-sm-offset-2 col-sm-4">
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+          </div>
+        </div>
+      </form>
+      <!-- Ends form section -->       
+    </div>
+
+{% endblock %}
